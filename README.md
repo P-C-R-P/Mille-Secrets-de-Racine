@@ -1,10 +1,11 @@
-# Mille Secrets de Racine
+# _Mille Secrets_ de Racine
 
 ---
 
-A **textual analysis** and **data visualisation** of _Britannicus_ by Jean Racine. This project was created for the course on **Data Visualisation**, run by [Isaac Pante] at the University of Lausanne] (UNIL). It also deployed textual analysis skills gained during the course on **Data Analysis**, run by [Aris Xanthos] and [François Bavaud] at UNIL.
+A **textual analysis** and **data visualisation** of _Britannicus_ by Jean Racine. This project was created for the course on **Data Visualisation**, run by [Isaac Pante] at the [University of Lausanne] (UNIL). It also deployed textual analysis skills gained from the course on **Data Analysis**, run by [Aris Xanthos] and [François Bavaud] at UNIL.
 
 **Author**: _Philippa Payne_ (<philippa.payne@unil.ch>)
+
 **Date**: _Spring Semester, 2022_
 
 <figure>
@@ -74,7 +75,7 @@ Week 6 (06/05/2022) - finalising drafts with GitHub
 
 ## Installation
 
-- Ensure you have set up a local server or have access to a live server extension via your chosen Integrated Development Environment (IDE) in order to display the data associated with the .csv data file for the project. For example, download [Visual Studio Code] and add the [Live Server] extension.
+- Ensure you have set up a local server or have access to a live server extension via your chosen Integrated Development Environment (IDE) in order to display the data associated with the _.csv_ data file for the project. For example, download [Visual Studio Code] and add the [Live Server] extension.
 - Download the files in the [GitHub] repository for the project, [racineDataVis], in order to view the project.
 
 ---
