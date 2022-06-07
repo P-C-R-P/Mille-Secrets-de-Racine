@@ -9,7 +9,7 @@ A **textual analysis** and **data visualisation** of _Britannicus_ by Jean Racin
 **Date**: _Spring Semester, 2022_
 
 <figure>
-    <img alt="Visualisation" width="500px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgyYUgngbdeMoCwBFDHxmn5HFYKNk1BtBUNeHEWBc38hFq4ix8vgK6gfPA6A9IyU__mmk&usqp=CAU"/>
+    <img alt="Visualisation" height="500px" src=""/>
 </figure>
 
 ---
