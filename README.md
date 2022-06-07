@@ -34,15 +34,15 @@ These key statistics demonstrate the benefits of textual analysis to multiple ta
 
 ## Development
 
-### Data Collection
+### 1. Data Collection
 
 - Orange (process)
 
-### Data Organisation
+### 2. Data Organisation
 
 - Putting key data in external .csv
 
-### Data Visualisation
+### 3. Data Visualisation
 
 - Choices etc.
 
