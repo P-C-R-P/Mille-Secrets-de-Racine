@@ -118,4 +118,4 @@ There are clearly some obvious limitations to my project.
 
 ## Acknowledgements
 
-Thanks go to [Isaac Pante] for providing a course that demonstrated the power of data visualisation to effectively communicate information in the social sciences and humanities. Thanks go to [Aris Xanthos] for providing a course that demonstrated the power of data analysis to effectively extrapolate results in the social sciences and humanities. Thanks go to [Alain Cernushi] for providing the literary analysis course on _Britannicus_.
+Thanks go to [Isaac Pante] for providing a course that demonstrated the power of data visualisation to effectively communicate information in the social sciences and humanities. Thanks go to [Aris Xanthos] for providing a course that demonstrated the power of data analysis to effectively extrapolate results in the social sciences and humanities. Thanks go to [Alain Cernuschi] for providing the literary analysis course on _Britannicus_.
