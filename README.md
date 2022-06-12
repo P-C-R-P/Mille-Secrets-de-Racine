@@ -9,7 +9,7 @@ A **textual analysis** and **data visualisation** of _Britannicus_ by Jean Racin
 **Date**: _Spring Semester, 2022_
 
 <figure>
-    <img alt="Visualisation" height="500px" src=""/>
+    <img alt="Visualisation" src ="Assets/barChartTotal.png" width="500px" src=""/>
 </figure>
 
 ---
@@ -20,15 +20,42 @@ A **textual analysis** and **data visualisation** of _Britannicus_ by Jean Racin
 
 This project aimed to create a collection of data visualisations which expressed key statistics garnered from a textual analysis of Jean Racine's _Britannicus_. This project balanced aesthetic appeal, effective communication and accessible statistics.
 
+1. Aesthetics and storytelling, as discussed, are at least a third of the data visualisation process. Thus, it was clear to me from an early stage that I would make my data visualisations conform to a specific creative vision. I believe that I achieved this objective. My data visualisations are attractive and appealing, thus demanding attention. I chose the colour palette from 19th century costume engravings for the play.
+2. As this attempt was the first I had made, indeed maybe one of the first ever made, to visualise this play with data, I felt it was important to select data that was accessible and minimal. Too much data shown on one graphic would have distorted any clear message I wanted to communicate.
+3. From my experience with programming thus far, I acknowledge that responsiveness and interactivity form a large part of what makes creative programming projects appealing and accessible. I therefore chose to spend time making my visualisations adaptive to the size of the browser window and adding small interactive elements to engage my audience further.
+
 ### Target Audience
 
 These key statistics demonstrate the benefits of textual analysis to multiple target audiences, but, principally, students of literature and a general public interested in seeing a fresh perspective on a canonical piece of literature. By graphically representing Racine's theatrical work, this data visualisation project hopes to foreground the benfits of data analysis and computational techniques to humanities disciplines and, by extension, advocate for _Digital Humanities_ as an academic field.
 
 ### Key Features
 
-1. Aesthetic choices - colour scheme/choice of graphics
-2. Important themes - results communicated/story told (simple)
-3. Responsiveness - interactivity/transitions
+This project consists of two types of graphic: bar charts and bubble charts. These forms of data visualisation are simple enough that everyone should be able to understand what they represent at a glance (using axes, size and colour).
+
+- All graphics can adapt to the size of the browser window
+
+### Bar Chart
+<figure>
+    <img alt="bar chart" width="500px" src="Assets/barChartTotal.png"/>
+</figure>
+
+- Transitions on page load for axes, labels and bars
+- Buttons allow data input to be changed so one can view each act
+- Colour was a creative sacrifice; whilst unscientific, it adds clarity
+
+
+### Bubble Chart
+<figure>
+    <img alt="bubble chart" width="500px" src="Assets/bubbleChartNouns.png"/>
+</figure>
+
+<figure>
+    <img alt="bubble chart" width="500px" src="Assets/bubbleChartVerbs.png"/>
+</figure>
+
+- Tranisitions on page load for legend, labels and circles
+- Buttons allow data input to be changed to verbs or nouns
+- Key breaks down the nouns into groupings, to encourage further reflection
 
 ---
 
@@ -36,21 +63,22 @@ These key statistics demonstrate the benefits of textual analysis to multiple ta
 
 ### 1. Data Collection
 
-- Orange (process)
+I first collected the data by performing my own textual analysis on _Britannicus_ using [Orange Data Mining], using the **Textable** and **Textable Prototypes** add-ons. I collected data pertaining to number of words, most common nouns, most common verbs, tenses used by each character, words that were unique to each character, etc.
 
 ### 2. Data Organisation
 
-- Putting key data in external .csv
+I first transferred the data form the resulting **Data Tables** into several .csv files and cut the data down so that it would fit my needs and purposes. I chose which data was the most significant after exploring and experimenting in the data collection stage of development.
 
 ### 3. Data Visualisation
 
-- Choices etc.
+This stage was when I put together the creative vision and the data sets I had collated. This stage was by far the most difficult and required that I undergo a lot of research in order to obtain the desired results (for example, circle packing).
 
 ### Tools Used
 
-- Orange - Textable/Textable Prototypes
-- D3.js
-- Visual Studio Code etc.
+- [Orange Data Mining] : **Textable** and **Textable Prototypes**
+- [D3]
+- [Visual Studio Code] : **Live Server** and **Live Share**
+
 
 ### Progress Journal
 
@@ -65,11 +93,11 @@ Week 6 (06/05/2022) - finalising drafts with GitHub
 
 ## Sources
 
-- Dear Data
-- Observable HQ/D3
-- Britannicus, Jean Racine
-- Malades imaginaires
-- Udacity D3 course
+- [Dear Data] was a significant source of inspiration and performing various handwritten _Dear Data_ tasks helped me understand what data visualisation should and should not be.
+- [Observable HQ] was a useful source that helped me work out how to make a bubble chart with interactive components.
+- [D3 Graph Gallery] was a useful source that helped me work out how to make a bar chart with interactive components.
+- _Britannicus_, Jean Racine
+- [Malades imaginaires] is an existing data visualisation project which I was vastly dissatisfied with, something which motivated me to try and create a more compelling and useful data visualisation.
 
 ---
 
@@ -82,12 +110,12 @@ Week 6 (06/05/2022) - finalising drafts with GitHub
 
 ## Conclusions
 
-Difficulties
-
-Limitations/Future
+There are clearly some obvious limitations to my project. 
+- I would love to improve the interactive component by adding more detail. For example, I would like to show relevant quotes on "hover" or "click" for the nouns and verbs. Similarly, I would like to play an audio clip for each character on "hover" or "click" for the bar chart graphic.
+- I am also aware that some of my code is rather amateur and could be improved with loops and iterations. Most of my choices were made on the basis of whether I could "make them" work or not.
 
 ---
 
 ## Acknowledgements
 
-Thanks go to [Isaac Pante] for providing a course that demonstrated the power of data visualisation to effectively communicate information in the social sciences and humanities. Thanks go to [Aris Xanthos] for providing a course that demonstrated the power of data analysis to effectively extrapolate results in the social sciences and humanities.
+Thanks go to [Isaac Pante] for providing a course that demonstrated the power of data visualisation to effectively communicate information in the social sciences and humanities. Thanks go to [Aris Xanthos] for providing a course that demonstrated the power of data analysis to effectively extrapolate results in the social sciences and humanities. Thanks go to [Alain Cernushi] for providing the literary analysis course on _Britannicus_.

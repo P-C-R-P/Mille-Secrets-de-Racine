@@ -30,18 +30,13 @@ body {
   button:hover {
     background-color: #f0eac1;
   }
-  form{
-    margin-top: 10%;
-  }
   input {
-    display: block;
-    text-align: center;
+    margin: 10px;
+    padding: 30px 30px 30px 30px;
     border-radius: 100px;
     border-style: double;
     border-width: 8px;
     border-color: black;
-    padding: 30px 30px 30px 30px;
-    margin: auto;
     background-color: #f5f1d6;
     font-size: 20px;
     font-weight: 500;
@@ -54,6 +49,9 @@ body {
     display: block;
     text-align: right;
     margin-right: 30px;
+  }
+  img{
+    margin: 20px;
   }
   .subtitle {
     font-size: 30px;
@@ -116,8 +114,7 @@ body {
   }
 
   .github {
-    display: block;
-    margin: auto;
+    margin: 10px;
     border-color: #f5f1d6;
     background-color: black;
     color: #f5f1d6;
@@ -127,3 +124,37 @@ body {
     background-color: #29250a;
     color: #f0eac1;
   }
+  .imageDiv{
+    padding: 40px 10px 10px 10px;
+    height: 100px;
+    display: block;
+    text-align: center;
+    margin: auto;
+    position: relative;
+  }
+  .buttonDiv {
+    display: block;
+    text-align: center;
+    position:relative;
+  }
+.adjust {
+  margin-top: 4%;
+}
+.author{
+  position: relative;
+  margin: 35px 20px 20px 20px;
+  display: block;
+  text-align: right;
+  font-size: 30px;
+  font-family: "Cinzel", serif;
+  font-weight: 500;
+  text-decoration: none;
+}
+.author:visited{
+  text-decoration: none;
+  color: #29250a;
+}
+.author:hover{
+  font-style: italic;
+  color: #29250a;
+}
