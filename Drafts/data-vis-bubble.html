@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      div {
+        border: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.3.0/dist/d3.min.js"></script>
+    <script>
+      const width = window.innerWidth / 1.25;
+      const height = window.innerHeight / 1.1;
+      const margins = {
+        top: 70,
+        right: 20,
+        bottom: 20,
+        left: 50
+      };
+
+      d3.csv("Data/nounsData.csv", function (d) {
+        return {
+          noun: d.noun,
+          value: +d.value,
+          group: d.group,
+        };
+      }).then((data) => {
+        const daisy = d3.map(data, (d) => d);
+        const veneer = d3.map(data, (d) => d.value);
+        const gondola = d3.map(data, (d) => d.group);
+        const indigo = d3.range(veneer.length).filter((i) => veneer[i] > 0);
+
+        const colours = d3.schemeTableau10;
+
+        const colour =
+          gondola &&
+          d3
+            .scaleBand()
+            .range(colours)
+            .domain(
+              data.map(function (d) {
+                return d.noun;
+              })
+            );
+
+        const label = d3.map(data, (d) => d.noun);
+
+        const root = d3.pack().size(width, height).padding(3)(
+          d3.hierarchy({ children: indigo }).sum((i) => veneer[i])
+        );
+
+        console.log("CSV Data: ", data);
+
+        let title = d3
+          .select("body")
+          .append("text")
+          .text("MILLE SECRETS DE JEAN RACINE")
+          .attr("class", "italics")
+          .append("text")
+          .text("Une analyse textuelle de BRITANNICUS")
+          .attr("class", "title");
+
+        let division = d3
+          .select("body")
+          .append("div")
+          .attr("width", width * 1.25)
+          .attr("height", height);
+
+        let subtitle = d3
+          .select("div")
+          .append("text")
+          .text("Noms les plus courants :")
+          .attr("class", "subtitle");
+
+        let canvas = d3
+          .select("div")
+          .append("svg")
+          .attr("width", width * 1.25)
+          .attr("height", height)
+
+        const organise1 = d3.select("svg").attr("height", height);
+
+        const r = d3.scaleSqrt().range([0, width / 8]);
+
+        r.domain([
+          d3.min(data, function (d) {
+            return d.value;
+          }),
+          d3.max(data, function (d) {
+            return d.value;
+          }),
+        ]);
+
+        const organise2 = organise1
+          .selectAll("g")
+          .data(root.leaves())
+          .enter()
+          .append("g")
+          .attr("transform", d => `translate(${d.value * 25},${d.value * 25})`);
+
+        const unique = `O-${Math.random().toString(16).slice(2)}`;
+
+        organise2
+          .append("clipPath")
+          .attr("id", (d) => `${unique}-clip-${d.data}`)
+          .append("circle")
+          .attr("r", (d) => r(d.value))
+          .attr("transform", d => `translate(${d.value * 25},${d.value * 25})`);
+
+        organise2
+          .append("text")
+          .selectAll("tspan")
+          .data((d) => `${label[d.data]}`.split(/\n/g))
+          .join("tspan")
+          .attr("x", Math.floor(Math.random()))
+          .attr("y", (d, i, daisy) => `${i - daisy.length / 2 + 0.85}em`)
+          .attr("fill-opacity", (d, i, daisy) =>
+            i === daisy.length - 1 ? 0.7 : null
+          )
+          .text((d) => d);
+
+        //   organise2
+        //  .append("circle")
+        // .attr("fill", "black")
+        //.attr("cx", (d) => Math.floor(Math.random() * width + margins.left))
+        //.attr("cy", (d) => Math.floor(Math.random() * height + margins.top))
+        // .attr("r", (d) => r(d.value));
+
+        //organise2
+        //.append("text")
+        //.text(function (d) {
+        //return d.noun;
+        //})
+        //.attr("x", (d) => Math.floor(Math.random() * width + margins.left));
+        //.attr("y", (d) => Math.floor(Math.random() * height + margins.top));
+      });
+    </script>
+  </body>
+</html>

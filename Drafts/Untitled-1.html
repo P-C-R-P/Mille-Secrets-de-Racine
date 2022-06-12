@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      svg {
+        background-color: black;
+        margin: 0 auto;
+        border: 1px solid;
+      }
+      body {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.3.0/dist/d3.min.js"></script>
+    <script>
+
+const scaleX = d3.scaleLinear().domain([0, 20]).range([0, width]);
+console.log(scaleX(19));
+
+const scaleY = d3.scaleLinear().domain([10, 340]).range([height, 0]);
+console.log(scaleY(19));
+
+const temperatureScale1 = d3
+  .scaleLinear()
+  .domain([-12, 45])
+  .range(["blue", "red"]);
+console.log(temperatureScale1(33));
+
+const temperatureScale2 = d3
+  .scaleLinear()
+  .domain([-60, 0, 60])
+  .range(["blue", "white", "red"]);
+console.log(temperatureScale2(0));
+
+const shortScale = d3.scaleLinear([0, 10], [-3, 3]);
+console.log(shortScale(0));
+console.log(shortScale.invert(-3));
+
+const overtaken = d3.scaleLinear([5, 10], [10, 20]);
+console.log("Overtaken: ", overtaken(30));
+
+const notOvertaken = d3.scaleLinear([5, 10], [10, 20]).clamp(true);
+console.log("Overtaken: ", notOvertaken(30));
+
+const automaticScale = d3
+  .scaleLinear()
+  .domain(d3.extent(d.words))
+  .range([0, width]);
+console.log(automaticScale(30));
+
+const continueData = d3.range(0, 100, 3);
+console.log("Continue Data: ", continueData);
+
+let colourScale = d3
+  .scaleLinear()
+  .domain(d3.extent(d.words))
+  .range(["blue", "red"]);
+console.log(colourScale(30));
+
+console.log("Ticks: ", d3.ticks(d3.min(d.words), d3.max(d.words), 5));
+
+const axisScale = d3
+  .scaleLinear()
+  .domain(d3.extent(d.words))
+  .range([100, width - 100]);
+
+const myAxis = d3.axisBottom(axisScale).ticks(5);
+
+designSpace
+          .selectAll("rect")
+          .data(d.words)
+          .enter()
+          .append("rect")
+          .attr("x", (d, i) => i * (width / data.length))
+          .attr("y", 0)
+          .attr("width", width / data.length)
+          .attr("height", height)
+          .attr("fill", (d) => colourScale(d));
+
+        designSpace
+          .append("g")
+          .attr("transform", "translate(10, 300)")
+          .call(myAxis);
+
+        designSpace
+          .append("g")
+          .selectAll("circle")
+          .data(d.characters)
+          .enter()
+          .append("circle")
+          .attr("cx", 50)
+          .attr("cy", (d, i) => 50 + i * 25)
+          .attr("r, 10")
+          .attr("fill", (d, i) => d3.schemeCategory10[i]);
+
+        designSpace
+          .append("g")
+          .selectAll("text")
+          .data(d.character)
+          .enter()
+          .append("text")
+          .attr("x", 70)
+          .attr("y", (d, i) => 3 + 50 + i * 25)
+          .text((d) => d.character)
+          .attr("fill", (d, i) => d3.schemeCategory10[i]);
+    </script>
+  </body>
+</html>

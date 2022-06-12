@@ -1,1 +1,129 @@
+body {
+    background-color: #faf8eb;
+  }
+  text {
+    font-size: 17px;
+    font-family: "Cinzel", serif;
+  }
+  div {
+    padding-top: 0.5%;
+  }
+  svg {
+    padding-left: 2%;
+  }
+  rect:hover {
+    fill-opacity: 1;
+  }
 
+  circle:hover {
+    fill-opacity: 1;
+  }
+  button {
+    padding: 10px 20px 10px 20px;
+    border-radius: 100px;
+    border-style: double;
+    border-width: 4px;
+    border-color: black;
+    margin: 0px 10px 0px 10px;
+    background-color: #f5f1d6;
+  }
+  button:hover {
+    background-color: #f0eac1;
+  }
+  form{
+    margin-top: 10%;
+  }
+  input {
+    display: block;
+    text-align: center;
+    border-radius: 100px;
+    border-style: double;
+    border-width: 8px;
+    border-color: black;
+    padding: 30px 30px 30px 30px;
+    margin: auto;
+    background-color: #f5f1d6;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Cinzel", serif;
+  }
+  input:hover {
+    background-color: #f0eac1;
+  }
+  span {
+    display: block;
+    text-align: right;
+    margin-right: 30px;
+  }
+  .subtitle {
+    font-size: 30px;
+    display: block;
+    text-align: center;
+  }
+  .title {
+    font-style: normal;
+    font-weight: 450;
+    font-size: 50px;
+    display: block;
+    text-align: center;
+    font-family: "Cinzel", serif;
+
+  }
+  .italics {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-style: italic;
+    font-weight: 450;
+    font-size: 50px;
+    display: block;
+    text-align: center;
+  }
+  .label {
+    font-style: italic;
+    font-size: 20px;
+  }
+
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+    stroke-width: 2px;
+  }
+  .buttonT {
+    display: inline-block;
+    margin-right: 90px;
+    border-color: #f5f1d6;
+    background-color: black;
+    color: #f5f1d6;
+  }
+  .buttonT:hover {
+    border-color: #f0eac1;
+    background-color: black;
+    color: #f0eac1;
+  }
+  .textT:hover {
+    fill: #f0eac1;
+  }
+  .chartChoice{
+        font-size: 17px;
+        font-family: "Cinzel", serif;
+  }
+  .chartSpan{
+    display: block;
+    text-align: center;
+    margin: 50px 20px 20px 20px;
+  }
+
+  .github {
+    display: block;
+    margin: auto;
+    border-color: #f5f1d6;
+    background-color: black;
+    color: #f5f1d6;
+  }
+  .github:hover {
+    border-color: #f0eac1;
+    background-color: #29250a;
+    color: #f0eac1;
+  }
