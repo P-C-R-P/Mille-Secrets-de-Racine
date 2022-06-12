@@ -97,7 +97,7 @@ Week 6 (06/05/2022) - finalising drafts with GitHub
 - [Observable HQ] was a useful source that helped me work out how to make a bubble chart with interactive components.
 - [D3 Graph Gallery] was a useful source that helped me work out how to make a bar chart with interactive components.
 - _Britannicus_, Jean Racine
-- [Malades imaginaires] is an existing data visualisation project which I was vastly dissatisfied with, something which motivated me to try and create a more compelling and useful data visualisation.
+- [Malades imaginaires] is an existing data visualisation project which I was vastly dissatisfied with, something which motivated me to try to create a more compelling and useful data visualisation.
 
 ---
 
