@@ -90,14 +90,15 @@ body {
   }
   .buttonT {
     display: inline-block;
-    margin-right: 90px;
+    margin-right: 50px;
+    margin-left: 10px;
     border-color: #f5f1d6;
     background-color: black;
     color: #f5f1d6;
   }
   .buttonT:hover {
     border-color: #f0eac1;
-    background-color: black;
+    background-color: #29250a;
     color: #f0eac1;
   }
   .textT:hover {
@@ -157,4 +158,21 @@ body {
 .author:hover{
   font-style: italic;
   color: #29250a;
+}
+.return{
+  font-size: 17px;
+  position: absolute;
+  padding: 12px 20px 12px 20px;
+  border-radius: 100px;
+  border-style: double;
+  border-width: 4px;
+  margin: 150px 20px 20px 17.5px;
+  border-color: #f5f1d6;
+  background-color: black;
+  color: #f5f1d6;
+}
+.return:hover {
+  border-color: #f0eac1;
+  background-color: #29250a;
+  color: #f0eac1;
 }
