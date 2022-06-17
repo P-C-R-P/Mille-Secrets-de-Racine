@@ -225,14 +225,14 @@ function updateChart(sourceFile) {
     canvas
       .append("text")
       .attr("y", height / 1.435)
-      .attr("x", (d) => width / 2.15)
+      .attr("x", width / 2.15)
       .attr("dy", "2em")
       .transition()
       .delay(1250)
       .duration(750)
       .attr("dy", "0em")
       .attr("text-anchor", "middle")
-      .text(function (d) {
+      .text(function () {
         if (sourceFile == dataSource1) {
           return "Fréquence par rayon et centralité ; sujet par couleur";
         } else if (sourceFile == dataSource2) {

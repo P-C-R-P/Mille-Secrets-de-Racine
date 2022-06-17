@@ -271,8 +271,8 @@
           updateChart(act5);
         });
 
-      d3.select(".button1").append("text").text("Act I");
-      d3.select(".button2").append("text").text("Act II");
-      d3.select(".button3").append("text").text("Act III");
-      d3.select(".button4").append("text").text("Act IV");
-      d3.select(".button5").append("text").text("Act V");
+      d3.select(".button1").append("text").text("Acte I");
+      d3.select(".button2").append("text").text("Acte II");
+      d3.select(".button3").append("text").text("Acte III");
+      d3.select(".button4").append("text").text("Acte IV");
+      d3.select(".button5").append("text").text("Acte V");
