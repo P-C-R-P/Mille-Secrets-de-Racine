@@ -113,6 +113,8 @@ Week 6 (06/05/2022) - finalising drafts with GitHub
 There are clearly some obvious limitations to my project. 
 - I would love to improve the interactive component by adding more detail. For example, I would like to show relevant quotes on "hover" or "click" for the nouns and verbs. Similarly, I would like to play an audio clip for each character on "hover" or "click" for the bar chart graphic.
 - I am also aware that some of my code is rather amateur and could be improved with loops and iterations. Most of my choices were made on the basis of whether I could "make them" work or not.
+- I would like to improve the bar chart graphic so that the axes and labels only appear once, on page load, and then only the bars transition when the data is changed; however, my attempts to integrate this component have failed so far.
+- I would like to work more on representing _topic modelling_ through data visualisation. I think an appropriate graphic would be a streamgraph, showing the development of key topics throughout the play, broken down into acts.
 
 ---
 
@@ -129,7 +131,9 @@ Thanks go to [Isaac Pante] for providing a course that demonstrated the power of
 [visual studio code]:https://code.visualstudio.com/
 [dear data]:http://www.dear-data.com/theproject
 [observable hq]:https://observablehq.com/@d3/bubble-chart
+[d3 graph gallery]:https://d3-graph-gallery.com/
 [malades imaginaires]:https://maladesimaginaires.github.io/intnetviz/?author=jean_racine&play=britannicus
 [github]:https://github.com/P-C-R-P
 [racinedatavis]:https://github.com/P-C-R-P/racineDataVis
 [alain cernuschi]:https://applicationspub.unil.ch/interpub/noauth/php/Un/UnPers.php?PerNum=30042&LanCode=8
+[live server]:https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
