@@ -110,11 +110,13 @@ Week 6 (06/05/2022) - finalising drafts with GitHub
 
 ## Conclusions
 
-There are clearly some obvious limitations to my project. 
+There are clearly some obvious limitations to my project:
 - I would love to improve the interactive component by adding more detail. For example, I would like to show relevant quotes on "hover" or "click" for the nouns and verbs. Similarly, I would like to play an audio clip for each character on "hover" or "click" for the bar chart graphic.
 - I am also aware that some of my code is rather amateur and could be improved with loops and iterations. Most of my choices were made on the basis of whether I could "make them" work or not.
 - I would like to improve the bar chart graphic so that the axes and labels only appear once, on page load, and then only the bars transition when the data is changed; however, my attempts to integrate this component have failed so far.
 - I would like to work more on representing _topic modelling_ through data visualisation. I think an appropriate graphic would be a streamgraph, showing the development of key topics throughout the play, broken down into acts.
+- Of course this data visualisation project could benefit from greater depth and breadth in general. As this project was done individually, there were certain limitations in terms of using time efficiently and setting an appropriate scope to the project.
+-I considered it to be more important to create a well-rounded and complete data visualisation project rather than focus on the complexity of any one of its elements. The level of intricacy can be scaled up now the first draft of the project is complete.
 
 ---
 
