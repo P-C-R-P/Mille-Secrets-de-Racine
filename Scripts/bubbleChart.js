@@ -67,7 +67,7 @@ function updateChart(sourceFile) {
 
     const subtitle2 = subtitle1
       .append("text")
-      .text(function (d) {
+      .text(function () {
         if (sourceFile == dataSource2) {
           return "Verbes les plus fréquemment utilisés :";
         } else if (sourceFile == dataSource1) {
@@ -97,7 +97,7 @@ function updateChart(sourceFile) {
         }
       })
       .attr("fill-opacity", 0.85)
-      .attr("stroke", function (d) {
+      .attr("stroke", function () {
         if (sourceFile == dataSource1) {
           return "black";
         } else if (sourceFile == dataSource2) {
@@ -131,7 +131,7 @@ function updateChart(sourceFile) {
       .attr("x", 0)
       .attr("y", (d, i, datum) => i - datum.length / 2 + 0.75 + "em")
       .attr("text-anchor", "middle")
-      .attr("fill", function (d) {
+      .attr("fill", function () {
         if (sourceFile == dataSource1) {
           return "black";
         } else if (sourceFile == dataSource2) {
@@ -239,7 +239,8 @@ function updateChart(sourceFile) {
           return "Fréquence par rayon et centralité (sans verbes communs)";
         }
       })
-      .attr("class", "label");
+      .attr("class", "label")
+      .on("mouseover", mouseOver);
   });
 }
 

@@ -50,7 +50,7 @@
 
           const subtitle2 = subtitle1
             .append("text")
-            .text(function (d) {
+            .text(function () {
               if (sourceFile == total) {
                 return "Nombre total de mots prononcés par chaque personnage :";
               } else if (sourceFile == act1) {
@@ -94,7 +94,7 @@
             .data(data)
             .enter()
             .append("g")
-            .attr("transform", function (d, i) {
+            .attr("transform", function () {
               return "translate(" + (margins.left + width / 60) + ", 0)";
             });
 
@@ -103,7 +103,7 @@
             .attr("x", (d, i) => i * ("width", width / data.length))
             .attr("width", barWidth - 1)
             .attr("height", 0)
-            .attr("y", (d) => y(0))
+            .attr("y", y(0))
             .transition()
             .delay(function (d, i) {
               return 1000 + i * 1000;
@@ -147,7 +147,7 @@
 
           const yAxis = d3.axisLeft(y).ticks(10);
 
-          const yAxisG = organise1
+          organise1
             .append("g")
             .attr("class", "axis")
             .attr(
@@ -170,7 +170,7 @@
           organise1
             .append("text")
             .attr("y", 0)
-            .attr("x", (d) => -1 * (height / 1.5))
+            .attr("x", -1 * (height / 1.5))
             .attr("transform", "rotate(-90)")
             .attr("dy", "-1em")
             .transition()
@@ -183,7 +183,7 @@
           d3.select("svg")
             .append("text")
             .attr("y", height)
-            .attr("x", (d) => width / 2 + margins.left / 2 - margins.right * 2)
+            .attr("x", width / 2 + margins.left / 2 - margins.right * 2)
             .attr("dy", "1em")
             .transition()
             .delay(1250)

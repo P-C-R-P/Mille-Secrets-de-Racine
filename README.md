@@ -119,3 +119,17 @@ There are clearly some obvious limitations to my project.
 ## Acknowledgements
 
 Thanks go to [Isaac Pante] for providing a course that demonstrated the power of data visualisation to effectively communicate information in the social sciences and humanities. Thanks go to [Aris Xanthos] for providing a course that demonstrated the power of data analysis to effectively extrapolate results in the social sciences and humanities. Thanks go to [Alain Cernuschi] for providing the literary analysis course on _Britannicus_.
+
+[isaac pante]: https://github.com/ipante
+[university of lausanne]: https://www.unil.ch/central/en/home.html
+[aris xanthos]:https://github.com/axanthos
+[françois bavaud]:https://applicationspub.unil.ch/interpub/noauth/php/Un/UnPers.php?PerNum=3052&LanCode=8&menu=coord
+[orange data mining]:https://orangedatamining.com/
+[d3]:https://d3js.org/
+[visual studio code]:https://code.visualstudio.com/
+[dear data]:http://www.dear-data.com/theproject
+[observable hq]:https://observablehq.com/@d3/bubble-chart
+[malades imaginaires]:https://maladesimaginaires.github.io/intnetviz/?author=jean_racine&play=britannicus
+[github]:https://github.com/P-C-R-P
+[racinedatavis]:https://github.com/P-C-R-P/racineDataVis
+[alain cernuschi]:https://applicationspub.unil.ch/interpub/noauth/php/Un/UnPers.php?PerNum=30042&LanCode=8
