@@ -176,3 +176,7 @@ body {
   background-color: #29250a;
   color: #f0eac1;
 }
+.detail {
+  font-size: 12px;
+  font-style: italic;
+}

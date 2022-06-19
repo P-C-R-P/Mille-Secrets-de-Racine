@@ -54,7 +54,7 @@ function updateChart(sourceFile) {
       group: d.group,
     };
   }).then((data) => {
-    const datum = d3.map(data, (d) => d);
+    d3.map(data, (d) => d);
     const value = d3.map(data, (d) => d.value);
     const group = d3.map(data, (d) => d.group);
     const range = d3.range(value.length);
@@ -65,7 +65,7 @@ function updateChart(sourceFile) {
       d3.hierarchy({ children: range }).sum((i) => value[i])
     );
 
-    const subtitle2 = subtitle1
+    subtitle1
       .append("text")
       .text(function () {
         if (sourceFile == dataSource2) {
@@ -83,8 +83,7 @@ function updateChart(sourceFile) {
       .join("g")
       .attr(
         "transform",
-        (d) =>
-          "translate(" + d.x / 1.1 + "," + (d.y / 1.5 + height / 35) + ")"
+        (d) => "translate(" + d.x / 1.1 + "," + (d.y / 1.5 + height / 35) + ")"
       );
 
     two
@@ -175,7 +174,7 @@ function updateChart(sourceFile) {
       .attr("stroke-opacity", 0)
       .transition()
       .duration(1000)
-      .attr("stroke-opacity", function (d) {
+      .attr("stroke-opacity", function () {
         if (sourceFile == dataSource1) {
           return 1;
         } else if (sourceFile == dataSource2) {
@@ -186,7 +185,7 @@ function updateChart(sourceFile) {
       .transition()
       .delay(1000)
       .duration(1000)
-      .attr("fill-opacity", function (d) {
+      .attr("fill-opacity", function () {
         if (sourceFile == dataSource1) {
           return 1;
         } else if (sourceFile == dataSource2) {
@@ -213,7 +212,7 @@ function updateChart(sourceFile) {
       .transition()
       .delay(1000)
       .duration(1000)
-      .attr("fill-opacity", function (d) {
+      .attr("fill-opacity", function () {
         if (sourceFile == dataSource1) {
           return 1;
         } else if (sourceFile == dataSource2) {
@@ -234,13 +233,116 @@ function updateChart(sourceFile) {
       .attr("text-anchor", "middle")
       .text(function () {
         if (sourceFile == dataSource1) {
-          return "Fréquence par rayon et centralité ; sujet par couleur";
+          return "Nombre d'instances par rayon et placement ; sujet par couleur*";
         } else if (sourceFile == dataSource2) {
-          return "Fréquence par rayon et centralité (sans verbes communs)";
+          return "Nombre d'instances par rayon et placement (sans verbes communs)";
         }
       })
-      .attr("class", "label")
-      .on("mouseover", mouseOver);
+      .attr("class", "label");
+
+    canvas
+      .append("text")
+      .attr("y", height / 25)
+      .attr("dy", "0em")
+      .attr("x", width / 1.5)
+      .text(
+        "*Nombre total d'instances de mot"
+      )
+      .attr("class", "detail")
+      .attr("opacity", "0.1")
+      .on("mouseover", function () {
+        d3.selectAll(".detail").attr("opacity", "1");
+      })
+      .on("mouseout", function () {
+        d3.selectAll(".detail").attr("opacity", "0.1");
+      });
+
+      canvas
+      .append("text")
+      .attr("y", height / 25)
+      .attr("dy", "1.15em")
+      .attr("x", width / 1.5)
+      .text(
+        "représentées par le rayon du cercle."
+      )
+      .attr("class", "detail")
+      .attr("opacity", "0.1")
+      .on("mouseover", function () {
+        d3.selectAll(".detail").attr("opacity", "1");
+      })
+      .on("mouseout", function () {
+        d3.selectAll(".detail").attr("opacity", "0.1");
+      });
+
+      canvas
+      .append("text")
+      .attr("y", height / 25)
+      .attr("dy", "2.3em")
+      .attr("x", width / 1.5)
+      .text(
+        "Cercles placés hiérarchiquement")
+      .attr("class", "detail")
+      .attr("opacity", "0.1")
+      .on("mouseover", function () {
+        d3.selectAll(".detail").attr("opacity", "1");
+      })
+      .on("mouseout", function () {
+        d3.selectAll(".detail").attr("opacity", "0.1");
+      });
+
+      canvas
+      .append("text")
+      .attr("y", height / 25)
+      .attr("dy", "3.45em")
+      .attr("x", width / 1.5)
+      .text(
+        "avec les mots les plus utilisés placés")
+      .attr("class", "detail")
+      .attr("opacity", "0.1")
+      .on("mouseover", function () {
+        d3.selectAll(".detail").attr("opacity", "1");
+      })
+      .on("mouseout", function () {
+        d3.selectAll(".detail").attr("opacity", "0.1");
+      });
+
+      canvas
+      .append("text")
+      .attr("y", height / 25)
+      .attr("dy", "4.6em")
+      .attr("x", width / 1.5)
+      .text(
+        "au centre et ceux les moins utilisés")
+      .attr("class", "detail")
+      .attr("opacity", "0.1")
+      .on("mouseover", function () {
+        d3.selectAll(".detail").attr("opacity", "1");
+      })
+      .on("mouseout", function () {
+        d3.selectAll(".detail").attr("opacity", "0.1");
+      });
+
+      canvas
+      .append("text")
+      .attr("y", height / 25)
+      .attr("dy", "5.75em")
+      .attr("x", width / 1.5)
+      .text(
+        "placés autour de la circonférence.")
+      .attr("class", "detail")
+      .attr("opacity", "0.1")
+      .on("mouseover", function () {
+        d3.selectAll(".detail").attr("opacity", "1");
+      })
+      .on("mouseout", function () {
+        d3.selectAll(".detail").attr("opacity", "0.1");
+      });
+      
+      d3.selectAll(".detail").attr("dx", "20em")
+      .transition()
+      .delay(1250)
+      .duration(750)
+      .attr("dx", "0em")
   });
 }
 
@@ -257,6 +359,7 @@ d3.select("span")
     d3.selectAll(".dot").remove();
     d3.selectAll(".label").remove();
     d3.selectAll(".subtitle").remove();
+    d3.selectAll(".detail").remove();
     updateChart(dataSource1);
   });
 
@@ -271,6 +374,7 @@ d3.select("span")
     d3.selectAll(".dot").remove();
     d3.selectAll(".label").remove();
     d3.selectAll(".subtitle").remove();
+    d3.selectAll(".detail").remove();
     updateChart(dataSource2);
   });
 

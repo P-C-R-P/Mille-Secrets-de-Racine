@@ -52,7 +52,7 @@
             .append("text")
             .text(function () {
               if (sourceFile == total) {
-                return "Nombre total de mots prononcés par chaque personnage :";
+                return "Nombre total de mots prononcés par chaque personnage dans toute la pièce :";
               } else if (sourceFile == act1) {
                 return "Nombre de mots prononcés par personnage dans l'acte I :";
               } else if (sourceFile == act2) {
