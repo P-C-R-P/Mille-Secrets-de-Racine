@@ -2,7 +2,7 @@
 
 ---
 
-A **textual analysis** and **data visualisation** of _Britannicus_ by Jean Racine. This project was created for the course on **Data Visualisation**, run by [Isaac Pante] at the [University of Lausanne] (UNIL). It also deployed textual analysis skills gained from the course on **Data Analysis**, run by [Aris Xanthos] and [François Bavaud] at UNIL.
+A **textual analysis** and **data visualisation** of _Britannicus_ by Jean Racine. This project was created for the course on **Data Visualisation**, run by [Isaac Pante] at the [University of Lausanne] (UNIL). It also deployed textual analysis skills gained from the course on **Data Analysis**, run by [Aris Xanthos] and [François Bavaud] at University of Lausanne.
 
 **Author**: _Philippa Payne_ (<philippa.payne@unil.ch>)
 
@@ -35,6 +35,7 @@ This project consists of two types of graphic: bar charts and bubble charts. The
 - All graphics can adapt to the size of the browser window
 
 ### Bar Chart
+
 <figure>
     <img alt="bar chart" width="500px" src="Assets/barChartTotal.png"/>
 </figure>
@@ -43,8 +44,8 @@ This project consists of two types of graphic: bar charts and bubble charts. The
 - Buttons allow data input to be changed so one can view each act
 - Colour was a creative sacrifice; whilst unscientific, it adds clarity
 
-
 ### Bubble Chart
+
 <figure>
     <img alt="bubble chart" width="500px" src="Assets/bubbleChartNouns.png"/>
 </figure>
@@ -79,7 +80,6 @@ This stage was when I put together the creative vision and the data sets I had c
 - [D3]
 - [Visual Studio Code] : **Live Server** and **Live Share**
 
-
 ### Progress Journal
 
 Week 1 (02/05/2022) - brainstorming choice of project
@@ -111,12 +111,13 @@ Week 6 (06/05/2022) - finalising drafts with GitHub
 ## Conclusions
 
 There are clearly some obvious limitations to my project:
+
 - I would love to improve the interactive component by adding more detail. For example, I would like to show relevant quotes on "hover" or "click" for the nouns and verbs. Similarly, I would like to play an audio clip for each character on "hover" or "click" for the bar chart graphic.
 - I am also aware that some of my code is rather amateur and could be improved with loops and iterations. Most of my choices were made on the basis of whether I could "make them" work or not.
 - I would like to improve the bar chart graphic so that the axes and labels only appear once, on page load, and then only the bars transition when the data is changed; however, my attempts to integrate this component have failed so far.
 - I would like to work more on representing _topic modelling_ through data visualisation. I think an appropriate graphic would be a streamgraph, showing the development of key topics throughout the play, broken down into acts.
 - Of course this data visualisation project could benefit from greater depth and breadth in general. As this project was done individually, there were certain limitations in terms of using time efficiently and setting an appropriate scope to the project.
--I considered it to be more important to create a well-rounded and complete data visualisation project rather than focus on the complexity of any one of its elements. The level of intricacy can be scaled up now the first draft of the project is complete.
+  -I considered it to be more important to create a well-rounded and complete data visualisation project rather than focus on the complexity of any one of its elements. The level of intricacy can be scaled up now the first draft of the project is complete.
 
 ---
 
@@ -126,16 +127,16 @@ Thanks go to [Isaac Pante] for providing a course that demonstrated the power of
 
 [isaac pante]: https://github.com/ipante
 [university of lausanne]: https://www.unil.ch/central/en/home.html
-[aris xanthos]:https://github.com/axanthos
-[françois bavaud]:https://applicationspub.unil.ch/interpub/noauth/php/Un/UnPers.php?PerNum=3052&LanCode=8&menu=coord
-[orange data mining]:https://orangedatamining.com/
-[d3]:https://d3js.org/
-[visual studio code]:https://code.visualstudio.com/
-[dear data]:http://www.dear-data.com/theproject
-[observable hq]:https://observablehq.com/@d3/bubble-chart
-[d3 graph gallery]:https://d3-graph-gallery.com/
-[malades imaginaires]:https://maladesimaginaires.github.io/intnetviz/?author=jean_racine&play=britannicus
-[github]:https://github.com/P-C-R-P
-[racinedatavis]:https://github.com/P-C-R-P/racineDataVis
-[alain cernuschi]:https://applicationspub.unil.ch/interpub/noauth/php/Un/UnPers.php?PerNum=30042&LanCode=8
-[live server]:https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
+[aris xanthos]: https://github.com/axanthos
+[françois bavaud]: https://applicationspub.unil.ch/interpub/noauth/php/Un/UnPers.php?PerNum=3052&LanCode=8&menu=coord
+[orange data mining]: https://orangedatamining.com/
+[d3]: https://d3js.org/
+[visual studio code]: https://code.visualstudio.com/
+[dear data]: http://www.dear-data.com/theproject
+[observable hq]: https://observablehq.com/@d3/bubble-chart
+[d3 graph gallery]: https://d3-graph-gallery.com/
+[malades imaginaires]: https://maladesimaginaires.github.io/intnetviz/?author=jean_racine&play=britannicus
+[github]: https://github.com/P-C-R-P
+[racinedatavis]: https://github.com/P-C-R-P/racineDataVis
+[alain cernuschi]: https://applicationspub.unil.ch/interpub/noauth/php/Un/UnPers.php?PerNum=30042&LanCode=8
+[live server]: https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
